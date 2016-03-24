@@ -119,7 +119,7 @@ Get the product of this matrix and another.
 */
 func (A *SparseMatrix) Times(B MatrixRO) (Matrix, error) {
 	if Bs, ok := B.(*SparseMatrix); ok {
-		return A.TimesSparse(Bs);
+		return A.TimesSparse(Bs)
 	}
 
 	if A.cols != B.Rows() {
